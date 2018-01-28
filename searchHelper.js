@@ -44,14 +44,14 @@ function search() {
           <div class = "container">
             <div class = "row">
               <div class = "col-md-6 col-xs-6">
-                <h4><a href="${url}" style = "color:red; width:80%; background-color:black; color:white; text-align:center; padding:10px; margin-top:15px;">${title}</a>
+                <img height="200" width="300" src="${image_url}"  style="margin:7px 0px;" />
+                <h4><a href="${url}" class="recipe" style = "color:red; width:80%; background-color:black; color:white; text-align:center; padding:10px; margin-top:15px;">${title}</a>
                 <button class="btn add-more" onclick="save('${title}', '${url}', '${author}', '${recipe_id}', '${image_url}')">+</button></h4>
-                <img height="200" width="300" src="${image_url}"  style="margin:7x 0px;" />
               </div>
               <div class = "col-md-6 col-xs-6">
-                <h4> <a href="${url2}" style = "color:red; width:80%;margin-top:5px; background-color:black; color:white; text-align:center; padding:10px;">${title2}</a>
-                <button class="btn add-more" onclick="save('${title2}', '${url2}', '${author2}', '${recipe_id2}', '${image_url2}')">+</button></h4>
                 <img height="200" width="300" src="${image_url2}" style="margin:7px 0px;"/>
+                <h4> <a href="${url2}" class="recipe" style = "color:red; width:80%; margin-top:15px; background-color:black; color:white; text-align:center; padding:10px;">${title2}</a>
+                <button class="btn add-more" onclick="save('${title2}', '${url2}', '${author2}', '${recipe_id2}', '${image_url2}')">+</button></h4>
               </div>
             </div>
             <div class = "row">
@@ -89,10 +89,12 @@ function save(title, url, author, recipe_id, image_url) {
     success: (recipe) => {
       const rid = recipe._id;
       const recipeItem = `<div id="${rid}">
-        <a href="${recipe.url}">${recipe.title}</a>
         <img height="200" width="300" src="${recipe.image_url}"/>
-        <button class="btn remove-me" onclick="remove('${rid}')">-</button>
-      </div><br/>`
+        <h4 id="favorites-text">
+          <a class="recipe" href="${recipe.url}">${recipe.title}</a>
+          <button class="btn btn-danger remove-me" onclick="remove('${rid}')">-</button>
+        </h4>
+      </div>`;
       $("#favorites").append(recipeItem);
     }
   })
@@ -119,10 +121,12 @@ $(function () {
       $.each(recipes, (i, recipe) => {
         const rid = recipe._id;
         const recipeItem = `<div id="${rid}">
-          <a href="${recipe.url}">${recipe.title}</a>
           <img height="200" width="300" src="${recipe.image_url}"/>
-          <button class="btn remove-me" onclick="remove('${rid}')">-</button>
-        </div><br/>`;
+          <h4 id="favorites-text">
+            <a class="recipe" href="${recipe.url}">${recipe.title}</a>
+            <button class="btn btn-danger remove-me" onclick="remove('${rid}')">-</button>
+          </h4>
+        </div>`;
         $favorites.append(recipeItem);
       });
     }

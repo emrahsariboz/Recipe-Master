@@ -2,6 +2,17 @@ body, html {
     height: 100%;
     font-family: "Inconsolata", sans-serif;
 }
+
+.recipe {
+  color: red;
+  width: 80%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+}
+
 .bgimg {
     background-position: center;
     background-size: cover;
@@ -12,7 +23,7 @@ body, html {
 }
 
 .button {
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .display-4{
@@ -23,14 +34,27 @@ body, html {
   margin-left: 16px;
 }
 
-h4 {
-  text-align: center;
+.row {
+  margin-bottom: 3%;
 }
 
 #search-button {
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
-#saveRecipe{
+#saveRecipe {
   margin-left: 2px;
+}
+
+#favorites {
+  text-align: center;
+}
+
+#favorites-text {
+  margin-bottom: 1%;
+}
+
+.footer-copyright {
+  padding-top: 5%;
+  text-align: center;
 }
