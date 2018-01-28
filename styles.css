@@ -3,6 +3,10 @@ body, html {
     font-family: "Inconsolata", sans-serif;
 }
 
+h3 {
+  text-align: center;
+}
+
 .recipe {
   color: red;
   width: 80%;
