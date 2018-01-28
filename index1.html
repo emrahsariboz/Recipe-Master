@@ -1,211 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head><!-- Start WOWSlider.com HEAD section -->
-<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-<script type="text/javascript" src="engine1/jquery.js"></script>
-<!-- End WOWSlider.com HEAD section --></head>
-<title>Recipe Generator</title>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <script type="text/javascript" src="engine1/jquery.js"></script> -->
+  <title>Recipe Generator</title>
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
-}
-.bgimg {
-    background-position: center;
-    background-size: cover;
-    min-height: 75%;
-}
-
-.menu {
-    display: none;
-}
-.display-4{
-  margin-top: 60px;
-}
-#saveRecipe{
-  margin-left: 2px;
-}
-.intro{
-  margin-left: 16px;
-}
-
-</style>
-
-
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
 <body>
 
 
-
-<script type="text/javascript" src="engine1/wowslider.js"></script>
-<script type="text/javascript" src="engine1/script.js"></script>
-<!-- End WOWSlider.com BODY section -->
-<!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
     <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+      <a href="#about" onclick="return aboutClicked()"class="w3-button w3-block w3-black">ABOUT</a>
     </div>
     <div class="w3-col s3">
       <a href="#menu" class="w3-button w3-block w3-black">SEARCH</a>
     </div>
     <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">FAVOURITE</a>
+      <a href="#favorites" class="w3-button w3-block w3-black">FAVORITES</a>
     </div>
   </div>
 </div>
+
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><a href="http://wowslider.net"><img src="data1/images/image1.jpg" alt="css slideshow" title="Image1" id="wows1_0"/></a></li>
+		<li><img src="data1/images/image2.jpg" alt="image2" title="image2" id="wows1_1"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="Image1"><span><img src="data1/tooltips/image1.jpg" alt="Image1"/>1</span></a>
+		<a href="#" title="image2"><span><img src="data1/tooltips/image2.jpg" alt="image2"/>2</span></a>
+		<a href="#" title="image3"><span><img src="data1/tooltips/image3.jpg" alt="image3"/>3</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"></div>
+<div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+
 <!-- Header with image -->
-<!-- Header with image -->
-
-
-<div class="container">
-  <div class="row">
-<div class="col-md-6 col-xs-6">
-
-</div>
-
-<div class="intro">
-
-
-<h1 class="display-4">Hello, hengry! <br> What do you have?.   </h1>
-
-<form id="ingredients-form">
-  <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default">Beef or tomotoe, etc  .</span>
-      <br>
-        <input class="input" id="field1" type="text" name="" value="">
-        <button id="b1" type="button" class="btn add-more"name="button">+</button>
-      <br></p>
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Cooking made easyy !!</span>
   </div>
-</form>
-
-
-</div>
-
-<div id="recipe-results" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
   </div>
-</div>
-
-</div>
-    </div>
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-xs-6">
-      <hr class="my-4">
-      <p class="lead">
-        <button id="saveRecipe" type="button" class="btn" onclick="search()">Recipe pls?
-        </button>
-      </p>
-
-    </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-black">Available at any time</span>
   </div>
-</div>
-
-
+</header>
 <!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
+  <div class="w3-sand w3-grayscale w3-large">
 
   <!-- About Container -->
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE RECEPIES </span></h5>
-    <p> JUST ENTER THE INGREDIENTS YOU HAVE !! </p>
-    <p>SELECT THE PRODUCT YOU WANT TO MAKE .</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef Owner: Kumuda Aggarwal </p>
+  <div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE RECIPES </span></h5>
+      <p> JUST ENTER THE INGREDIENTS YOU HAVE IN YOUR REFRIGERATOR!! </p>
+      <p>CLICK THE "+" SIGN TO ADD THE RECIPE TO YOUR FAVORITES </p>
+      <p>IF SOMEHOW YOU END UP NOT LIKING IT, YOU COULD REMOVE THE RECIPE BY CLICKING THE "-" BUTTON.</p>
+      <p>YOU'RE WELCOME!</p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+        <p>Yours,</p>
+        <p>Recipe Master Team</p>
+      </div>
+
+      <p><strong>Opening hours:</strong> everyday from 12am to 12am.</p>
+
     </div>
-
-
   </div>
-</div>
 
+  <div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">FIND YOUR RECIPES </span></h5>
+    <br>
+    </div>
+  </div>
 
+  <div align="center">
+    <form id="ingredients-form">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Type beef, tomato or cilantro, etc.</span>
+          <br>
+            <input class="input" id="field1" type="text" name="" value="">
+            <button id="b1" type="button" class="btn add-more"name="button">+</button>
+          <br></p>
+      </div>
+    </form>
+    <button id="search-button" class="button" onclick="search()">What can I make?</button>
+  </div>
+  <div id="recipe-results"></div>
+
+  <div class="w3-container" id="favorites">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MY FAVORITES </span></h5>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+     <div class="container-fluid">
+         © 2018 Copyright: <a href="https://www.MDBootstrap.com"> Recipe Master</a>
+     </div>
+  </div>
 
 </body>
-<script
-src="http://code.jquery.com/jquery-3.1.1.js"
 
-integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-
-crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
-
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>  <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 <script src="recipeGenerator.js"></script>
-
-
-
-
-<script type="text/javascript">
-function search() {
-  var $inputs = $('#ingredients-form :input');
-  var allInputs = [];
-  $inputs.each(function() {
-    allInputs.push($(this).val());
-  })
-  const cleanedInputs = allInputs.filter(i => {
-    return i != "";
-  });
-  function combine(text, i) {
-    return text + `,${i}`;
-  }
-  var ingredients = cleanedInputs.reduce(combine);
-  $.ajax({
-    type: "GET",
-    url: "https://pure-chamber-65117.herokuapp.com/search/" + ingredients,
-    success: (recipe) => {
-      const recipeList = recipe.body.recipes.map(recipe => {
-        return {
-          title: recipe.title,
-          url: recipe.source_url,
-          author: recipe.publisher,
-          recipe_id: recipe.recipe_id,
-          image_url: recipe.image_url
-        }
-      });
-      console.log(recipeList);
-      for (let i = 0; i < 6; i+=2) {
-        const recipe_title = recipeList[i].title;
-        const image_url = recipeList[i].image_url;
-        const url = recipeList[i].url;
-        const recipe_title2 = recipeList[i+1].title;
-        const image_url2 = recipeList[i+1].image_url;
-        const url2 = recipeList[i+1].url;
-
-        const carouselItem = `
-        <div class = "container">
-         <div class = "row">
-         <div class = "col-md-6 col-xs-6">
-
-         <h4><a href="${url}" style = "color:red; width:80%; background-color:black; color:white; text-align:center; padding:10px; margin-top:15px;">  ${recipe_title} </a></h4>
-         <img height="200" width="300" src="${image_url}"  style="margin:7x 0px;" />
-         </div>
-         <div class = "col-md-6 col-xs-6">
-         <h4> <a href="${url2}" style = "color:red; width:80%;margin-top:5px; background-color:black; color:white; text-align:center; padding:10px;">${recipe_title2}</a> </h4>
-         <img height="200" width="300" src="${image_url2}" style="margin:7px 0px;"/>
-         </div>
-         </div>
-         </div>`
-        $("#recipe-results").append(carouselItem);
-      }
-    }
-  });
-}
-
-</script>
+<script src="searchHelper.js"></script>

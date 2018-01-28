@@ -7,6 +7,10 @@ h3 {
   text-align: center;
 }
 
+#wowslider-container1 {
+  height: 150px;
+}
+
 .recipe {
   color: red;
   width: 80%;
