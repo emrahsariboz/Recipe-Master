@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <script type="text/javascript" src="engine1/jquery.js"></script> -->
+  <title>Recipe Generator</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+<body>
+<!-- <div id="wowslider-container1">
+<div class="ws_images"><ul>
+    <li><img src="image1.jpg" alt="Image1" title="Image1" id="wows1_0"/></li>
+    <li><a href="#"><img src="image2.jpg" alt="image slider" title="image2" id="wows1_1"/></a></li>
+    <li><img src="image3.jpg" alt="image3" title="image3" id="wows1_2"/></li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="Image1"><span><img src="image1.jpg" alt="Image1"/>1</span></a>
+    <a href="#" title="image2"><span><img src="image2.jpg" alt="image2"/>2</span></a>
+    <a href="#" title="image3"><span><img src="image3.jpg" alt="image3"/>3</span></a>
+  </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">javascript slideshow</a> by WOWSlider.com v8.8</div>
+<div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script> -->
+
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" onclick="return aboutClicked()"class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">SEARCH</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#favorites" class="w3-button w3-block w3-black">FAVORITES</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Cooking made easyy !!</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-black">Available at any time</span>
+  </div>
+</header>
+<!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+
+  <!-- About Container -->
+  <div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE RECIPES </span></h5>
+      <p> JUST ENTER THE INGREDIENTS YOU HAVE !! </p>
+      <p>SELECT THE PRODUCT YOU WANT TO MAKE .</p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+        <p>Chef Owner: Kumuda Aggarwal </p>
+      </div>
+
+      <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+
+    </div>
+  </div>
+
+  <div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">FIND YOUR RECIPE </span></h5>
+    <br>
+    </div>
+  </div>
+
+  <div align="center">
+    <form id="ingredients-form">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Beef or tomotoe, etc  .</span>
+          <br>
+            <input class="input" id="field1" type="text" name="" value="">
+            <button id="b1" type="button" class="btn add-more"name="button">+</button>
+          <br></p>
+      </div>
+    </form>
+    <button class="button" onclick="search()">What can I make?</button>
+  </div>
+  <div id="recipe-results"></div>
+
+  <div class="w3-container" id="favorites">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MY FAVORITES </span></h5>
+    <br>
+    </div>
+  </div>
+
+</body>
+
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="recipeGenerator.js"></script>
+<script src="searchHelper.js"></script>
