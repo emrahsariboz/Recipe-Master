@@ -14,3 +14,23 @@ body, html {
 .button {
   margin-left: 1%;
 }
+
+.display-4{
+  margin-top: 60px;
+}
+
+.intro{
+  margin-left: 16px;
+}
+
+h4 {
+  text-align: center;
+}
+
+#search-button {
+  margin-bottom: 2%;
+}
+
+#saveRecipe{
+  margin-left: 2px;
+}
